@@ -1,3 +1,9 @@
+pub struct Vector3<T>{
+    x: T,
+    y: T,
+    z: T,
+}
+
 #[cfg(test)]
 mod tests {
     #[test]
@@ -5,3 +11,5 @@ mod tests {
         assert_eq!(2 + 2, 4);
     }
 }
+
+
