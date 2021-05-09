@@ -1,0 +1,5 @@
+[workspace]
+
+members = [
+    "victory_core",
+]
