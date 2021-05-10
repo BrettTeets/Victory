@@ -1,28 +1,15 @@
-use crate::basic::{FloatPoint};
-use num_traits::{cast};
+use std::f32::consts::PI as PI;
 
 #[repr(C)]
 #[derive(Copy, Clone, PartialEq, PartialOrd)]
-pub struct Rad<T>(pub T);
+pub struct Rad(f32);
 
-
-#[repr(C)]
-#[derive(Copy, Clone, PartialEq, PartialOrd)]
-pub struct Deg<T>(pub T);
-
-
-impl<T> From<Rad<T>> for Deg<T> where T: FloatPoint,
-{
-    //could be inlined?
-    fn from(rad: Rad<T>) -> Deg<T> {
-        Deg(rad.0 * cast(180.0 / std::f64::consts::PI).unwrap())
-    }
+impl Rad{
+    pub const ONEPI: Self = Rad(PI); //180 degrees
+    pub const TWOPI: Self = Rad(2.0*PI); //360 degrees
+    pub const THIRDPI: Self = Rad((1.0/3.0)*PI); //60 degrees
 }
 
-impl<T> From<Deg<T>> for Rad<T> where T: FloatPoint,
-{
-    //could be inlined?
-    fn from(deg: Deg<T>) -> Rad<T> {
-        Rad(deg.0 * cast(std::f64::consts::PI / 180.0).unwrap())
-    }
-}
+
+
+
