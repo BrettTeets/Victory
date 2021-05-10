@@ -1,12 +1,5 @@
-pub mod basic;
 pub mod angle;
-
-
-pub struct Vector3<T>{
-    x: T,
-    y: T,
-    z: T,
-}
+pub mod vector;
 
 #[cfg(test)]
 mod tests {

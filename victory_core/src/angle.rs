@@ -1,7 +1,7 @@
 use std::f32::consts::PI as PI;
 
 #[repr(C)]
-#[derive(Copy, Clone, PartialEq, PartialOrd)]
+#[derive(Copy, Clone, PartialEq, PartialOrd, Debug)]
 pub struct Rad(f32);
 
 impl Rad{
