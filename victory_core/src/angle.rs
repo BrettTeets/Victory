@@ -2,7 +2,7 @@ use std::f32::consts::PI as PI;
 
 #[repr(C)]
 #[derive(Copy, Clone, PartialEq, PartialOrd, Debug)]
-pub struct Rad(f32);
+pub struct Rad(pub f32);
 
 impl Rad{
     pub const ONEPI: Self = Rad(PI); //180 degrees

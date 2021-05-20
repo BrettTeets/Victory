@@ -1,5 +1,6 @@
 pub mod angle;
 pub mod vector;
+pub mod color;
 
 #[cfg(test)]
 mod tests {
